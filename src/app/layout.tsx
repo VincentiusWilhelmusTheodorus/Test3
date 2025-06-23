@@ -2,8 +2,20 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Gemini Template - Tom Naberink',
-  description: 'Een template om te werken met Gemini AI - Gemaakt door Tom Naberink',
+  title: 'HBO Sportkunde Leiderschap Academy - Leer Leiderschap, Groepsvorming & Motivatie',
+  description: 'Uitgebreide leerplatform voor HBO sportkunde studenten over leiderschap in sport, groepsvorming, teambuilding en motivatietechnieken. Met AI-ondersteuning en praktische tools.',
+  keywords: [
+    'sportkunde',
+    'leiderschap',
+    'groepsvorming',
+    'motivatie',
+    'teambuilding',
+    'sportpsychologie',
+    'HBO',
+    'sport management',
+    'coaching',
+    'teamdynamiek'
+  ],
 }
 
 export default function RootLayout({
@@ -18,4 +30,4 @@ export default function RootLayout({
       </body>
     </html>
   )
-} 
+}

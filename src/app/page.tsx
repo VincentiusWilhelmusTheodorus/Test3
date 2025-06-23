@@ -1,206 +1,504 @@
 import TestChatBot from '@/components/TestChatBot'
-import CopyButton from '@/components/CopyButton'
 import Image from 'next/image'
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-indigo-100">
-      <div className="container mx-auto px-4 py-16">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center justify-center w-16 h-16 bg-purple-600 rounded-full mb-6">
-            <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-            </svg>
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-green-50 to-orange-50">
+      {/* Header */}
+      <header className="bg-white shadow-lg border-b-4 border-blue-600">
+        <div className="container mx-auto px-4 py-6">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center space-x-4">
+              <div className="w-16 h-16 bg-gradient-to-br from-blue-600 to-green-600 rounded-full flex items-center justify-center">
+                <span className="text-white text-2xl font-bold">🏃‍♂️</span>
+              </div>
+              <div>
+                <h1 className="text-3xl font-bold text-gray-800">
+                  Sportkunde Leiderschap Academy
+                </h1>
+                <p className="text-blue-600 font-medium">
+                  HBO Sportkunde • Leiderschap • Groepsvorming • Motivatie
+                </p>
+              </div>
+            </div>
+            <div className="hidden md:flex items-center space-x-4">
+              <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
+                🎓 HBO Niveau
+              </span>
+              <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">
+                🤖 AI Ondersteund
+              </span>
+            </div>
           </div>
-          
-          <h1 className="text-5xl font-bold text-gray-800 mb-4">
-            Vibe Coding Template
-          </h1>
-          
-          <p className="text-xl text-purple-700 font-medium mb-6">
-            Dit is een template om met Bolt te werken waarbij we gebruik maken van Gemini. Dit template is gemaakt door Tom Naberink
-          </p>
+        </div>
+      </header>
 
-          {/* AI voor Docenten Logo */}
-          <div className="flex justify-center mb-8">
-            <div className="bg-white rounded-lg shadow-lg p-4">
-              <Image 
-                src="/images/ai-voor-docenten-logo.png" 
-                alt="AI voor Docenten Logo" 
-                width={192} 
-                height={96}
-                className="rounded-lg"
-              />
+      <div className="container mx-auto px-4 py-8">
+        {/* Hero Section */}
+        <div className="text-center mb-12">
+          <h2 className="text-4xl font-bold text-gray-800 mb-4">
+            Word een Inspirerende Sportleider
+          </h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+            Leer alles over effectief leiderschap in de sport, groepsdynamiek en het motiveren van sporters, 
+            teams en vrijwilligers. Met praktische tools, AI-ondersteuning en interactieve oefeningen.
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <div className="bg-white rounded-lg shadow-md p-4 flex items-center space-x-3">
+              <span className="text-2xl">🏆</span>
+              <div className="text-left">
+                <div className="font-semibold text-gray-800">Praktijkgericht</div>
+                <div className="text-sm text-gray-600">Echte sportcases</div>
+              </div>
+            </div>
+            <div className="bg-white rounded-lg shadow-md p-4 flex items-center space-x-3">
+              <span className="text-2xl">👥</span>
+              <div className="text-left">
+                <div className="font-semibold text-gray-800">Teamdynamiek</div>
+                <div className="text-sm text-gray-600">Groepsprocessen</div>
+              </div>
+            </div>
+            <div className="bg-white rounded-lg shadow-md p-4 flex items-center space-x-3">
+              <span className="text-2xl">💪</span>
+              <div className="text-left">
+                <div className="font-semibold text-gray-800">Motivatietechnieken</div>
+                <div className="text-sm text-gray-600">Prestatie verbeteren</div>
+              </div>
             </div>
           </div>
         </div>
 
-        {/* Main Content */}
-        <div className="max-w-4xl mx-auto">
+        {/* Main Content Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
           
-          {/* Setup Instructions */}
-          <div className="bg-white rounded-2xl shadow-xl p-8">
-            <h2 className="text-2xl font-bold text-purple-800 mb-6 flex items-center">
-              <span className="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center mr-3">
-                🔧
-              </span>
-              Setup Instructies
-            </h2>
+          {/* Leiderschap Module */}
+          <div className="bg-white rounded-2xl shadow-xl p-8 border-t-4 border-blue-600">
+            <div className="text-center mb-6">
+              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-3xl">👑</span>
+              </div>
+              <h3 className="text-2xl font-bold text-blue-800 mb-2">Leiderschap in Sport</h3>
+              <p className="text-gray-600">Ontwikkel je leiderschapsvaardigheden voor sportomgevingen</p>
+            </div>
             
-            <div className="space-y-6">
+            <div className="space-y-4">
+              <div className="bg-blue-50 rounded-lg p-4">
+                <h4 className="font-semibold text-blue-800 mb-2">🎯 Leiderschapsstijlen</h4>
+                <ul className="text-sm text-blue-700 space-y-1">
+                  <li>• Transformationeel leiderschap</li>
+                  <li>• Situationeel leiderschap</li>
+                  <li>• Authentiek leiderschap</li>
+                  <li>• Servant leadership</li>
+                </ul>
+              </div>
               
-              {/* Step 1 - Fork GitHub Template */}
-              <div className="border-l-4 border-purple-500 pl-6">
-                <h3 className="text-lg font-semibold text-gray-800 mb-2">
-                  Stap 1: Fork dit template in GitHub
-                </h3>
-                <p className="text-gray-600 mb-3">
-                  Ga naar <a href="https://github.com" target="_blank" className="text-purple-600 hover:text-purple-800 underline">github.com</a> en login in. Ga dan naar deze pagina: <a href="https://github.com/TomNaberink/apitemplateTom" target="_blank" className="text-purple-600 hover:text-purple-800 underline">https://github.com/TomNaberink/apitemplateTom</a>
-                </p>
-                <p className="text-gray-600 mb-3">
-                  Klik rechtsbovenin op '<strong>Use this template</strong>', geef het een gepaste naam voor je project en klik op '<strong>create fork</strong>'.
-                </p>
-                <div className="bg-gray-900 text-green-400 p-4 rounded-lg font-mono text-sm">
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="text-gray-400">GitHub Repository URL</span>
-                    <CopyButton 
-                      text="https://github.com/TomNaberink/apitemplateTom"
-                      className="text-purple-400 hover:text-purple-300 text-xs transition-colors"
-                      title="Kopieer GitHub URL"
-                    />
-                  </div>
-                  <code>https://github.com/TomNaberink/apitemplateTom</code>
-                </div>
+              <div className="bg-blue-50 rounded-lg p-4">
+                <h4 className="font-semibold text-blue-800 mb-2">🔧 Praktische Vaardigheden</h4>
+                <ul className="text-sm text-blue-700 space-y-1">
+                  <li>• Effectieve communicatie</li>
+                  <li>• Besluitvorming onder druk</li>
+                  <li>• Conflicthantering</li>
+                  <li>• Feedback geven en ontvangen</li>
+                </ul>
               </div>
-
-              {/* Step 2 - Import from GitHub in Bolt */}
-              <div className="border-l-4 border-purple-500 pl-6">
-                <h3 className="text-lg font-semibold text-gray-800 mb-2">
-                  Stap 2: Import in Bolt.new
-                </h3>
-                <p className="text-gray-600 mb-3">
-                  Open <a href="https://bolt.new" target="_blank" className="text-purple-600 hover:text-purple-800 underline">Bolt.new</a> en login. Selecteer '<strong>import from github</strong>' en login op GitHub. Kies dan de '<strong>repository</strong>' die je net hebt geforkt.
-                </p>
-              </div>
-
-              {/* Step 3 - Create .env.local */}
-              <div className="border-l-4 border-purple-500 pl-6">
-                <h3 className="text-lg font-semibold text-gray-800 mb-2">
-                  Stap 3: Maak een .env.local bestand
-                </h3>
-                <p className="text-gray-600 mb-3">
-                  Als het template is geladen ga je naar het <strong>tabblad "Code"</strong>. Bij de files doe je <strong>rechtermuisknop</strong> en klik je op <strong>"New File"</strong>. Die noem je <code className="bg-gray-100 px-2 py-1 rounded text-sm">.env.local</code>. Daar binnen zet je het volgende:
-                </p>
-                <div className="bg-gray-900 text-green-400 p-4 rounded-lg font-mono text-sm">
-                  <div className="flex items-center justify-end mb-2">
-                    <CopyButton 
-                      text="GEMINI_API_KEY=your_actual_api_key_here"
-                      className="text-purple-400 hover:text-purple-300 text-xs transition-colors"
-                      title="Kopieer .env.local inhoud"
-                    />
-                  </div>
-                  <code>GEMINI_API_KEY=your_actual_api_key_here</code>
-                </div>
-                <p className="text-orange-600 text-sm mt-2 font-medium">
-                  ⚠️ Vervang "your_actual_api_key_here" met je echte API key! (zie stap 3)
-                </p>
-              </div>
-
-              {/* Step 4 - Get API Key */}
-              <div className="border-l-4 border-purple-500 pl-6">
-                <h3 className="text-lg font-semibold text-gray-800 mb-2">
-                  Stap 4: Verkrijg een Gemini API Key
-                </h3>
-                <p className="text-gray-600 mb-3">
-                  Ga naar Google AI Studio om je gratis API key aan te maken:
-                </p>
-                <a 
-                  href="https://makersuite.google.com/app/apikey" 
-                  target="_blank"
-                  className="inline-flex items-center px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors"
-                >
-                  <span>Verkrijg API Key</span>
-                  <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                  </svg>
-                </a>
-                
-                <div className="mt-4 p-4 bg-orange-50 border border-orange-200 rounded-lg">
-                  <p className="text-orange-800 text-sm">
-                    ⚠️ <strong>Let op</strong>, je kunt gratis en risicovrij oefenen met de Gemini API. Daarnaast kun je 300,- dollar gratis budget krijgen. Als dat op, dan moet je het koppelen aan je creditcard. Zorg ervoor dat je weet wat je doet op dat moment!
-                  </p>
-                </div>
-              </div>
-
-              {/* Step 5 - Enhanced Test Step */}
-              <div className="border-l-4 border-purple-500 pl-6">
-                <h3 className="text-lg font-semibold text-gray-800 mb-2">
-                  Stap 5: Test je API Key & Alle Features
-                </h3>
-                <TestChatBot />
-              </div>
-
-              {/* Step 6 - Build Step */}
-              <div className="border-l-4 border-purple-500 pl-6">
-                <h3 className="text-lg font-semibold text-gray-800 mb-2">
-                  Stap 6: Bouwen maar!
-                </h3>
-                <p className="text-gray-600">
-                  Er staat veel informatie in de <code className="bg-gray-100 px-2 py-1 rounded text-sm">README.md</code>, maar je mag ook lekker gaan viben! Wat ga jij maken om het onderwijs te verbeteren?
-                </p>
-              </div>
-
-              {/* Step 7 - Deploy with Vercel */}
-              <div className="border-l-4 border-purple-500 pl-6">
-                <h3 className="text-lg font-semibold text-gray-800 mb-2">
-                  Stap 7: Deploy met Vercel
-                </h3>
-                <p className="text-gray-600 mb-3">
-                  Ga naar <a href="https://vercel.com" target="_blank" className="text-purple-600 hover:text-purple-800 underline">Vercel.com</a>, login en koppel je Github. Klik op <strong>'Add New'</strong> en importeer de Github die je net hebt gemaakt binnen Bolt. <strong className="text-red-600">KLIK NOG NIET OP DEPLOY</strong>. Eerst moet je de <strong>'Environment Variable'</strong> instellen:
-                </p>
-                <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4 mb-3">
-                  <p className="text-yellow-800 text-sm mb-2">
-                    ⚙️ <strong>Environment Variables instellen:</strong>
-                  </p>
-                  <ul className="text-yellow-700 text-sm space-y-1">
-                    <li>• Bij <strong>'Key'</strong> vul je <code className="bg-yellow-100 px-1 rounded">GEMINI_API_KEY</code> in</li>
-                    <li>• Bij <strong>'Value'</strong> vul je je echte API key in</li>
-                    <li>• Klik dan pas op <strong>'Deploy'</strong></li>
-                  </ul>
-                </div>
-              </div>
-
-              {/* Step 8 - Test and Share */}
-              <div className="border-l-4 border-purple-500 pl-6">
-                <h3 className="text-lg font-semibold text-gray-800 mb-2">
-                  Stap 8: Testen en delen
-                </h3>
-                <p className="text-gray-600 mb-3">
-                  🎉 <strong>Gefeliciteerd!</strong> Je AI-tool is nu live op het internet. Test alles zorgvuldig voordat je het deelt!
-                </p>
-                <div className="bg-green-50 border border-green-200 rounded-lg p-4">
-                  <p className="text-green-800 text-sm">
-                    🌟 <strong>Tijd om te delen!</strong> Laat je collega's, studenten of vrienden zien wat je hebt gebouwd. Wie weet inspireer je anderen om ook te gaan experimenteren met AI in het onderwijs! 🚀
-                  </p>
-                </div>
+              
+              <div className="bg-blue-50 rounded-lg p-4">
+                <h4 className="font-semibold text-blue-800 mb-2">📚 Casestudies</h4>
+                <ul className="text-sm text-blue-700 space-y-1">
+                  <li>• Succesvolle sportcoaches</li>
+                  <li>• Teamcaptains in actie</li>
+                  <li>• Crisismanagement</li>
+                  <li>• Cultuurverandering</li>
+                </ul>
               </div>
             </div>
           </div>
 
-          {/* Footer */}
-          <div className="text-center mt-12">
-            <div className="inline-flex items-center space-x-4 text-purple-600">
-              <span>💜</span>
-              <span>Veel succes met bouwen!</span>
-              <span>💜</span>
+          {/* Groepsvorming Module */}
+          <div className="bg-white rounded-2xl shadow-xl p-8 border-t-4 border-green-600">
+            <div className="text-center mb-6">
+              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-3xl">🤝</span>
+              </div>
+              <h3 className="text-2xl font-bold text-green-800 mb-2">Groepsvorming & Teambuilding</h3>
+              <p className="text-gray-600">Begrijp en beïnvloed groepsdynamiek in sportteams</p>
             </div>
-            <p className="text-gray-500 text-sm mt-2">
-              Vibe Coding Template door Tom Naberink • Powered by Bolt, Next.js & Gemini AI
-            </p>
+            
+            <div className="space-y-4">
+              <div className="bg-green-50 rounded-lg p-4">
+                <h4 className="font-semibold text-green-800 mb-2">📊 Groepsdynamiek</h4>
+                <ul className="text-sm text-green-700 space-y-1">
+                  <li>• Tuckman's teamfasen</li>
+                  <li>• Rollen binnen teams</li>
+                  <li>• Groepsnormen en waarden</li>
+                  <li>• Sociale cohesie</li>
+                </ul>
+              </div>
+              
+              <div className="bg-green-50 rounded-lg p-4">
+                <h4 className="font-semibold text-green-800 mb-2">🎮 Teambuilding Activiteiten</h4>
+                <ul className="text-sm text-green-700 space-y-1">
+                  <li>• Vertrouwensoefeningen</li>
+                  <li>• Communicatiespellen</li>
+                  <li>• Probleem-oplossingstaken</li>
+                  <li>• Reflectiesessies</li>
+                </ul>
+              </div>
+              
+              <div className="bg-green-50 rounded-lg p-4">
+                <h4 className="font-semibold text-green-800 mb-2">⚡ Uitdagingen Aanpakken</h4>
+                <ul className="text-sm text-green-700 space-y-1">
+                  <li>• Conflicten in teams</li>
+                  <li>• Sociale uitsluiting</li>
+                  <li>• Prestatieverval</li>
+                  <li>• Motivatieverlies</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          {/* Motivatie Module */}
+          <div className="bg-white rounded-2xl shadow-xl p-8 border-t-4 border-orange-600">
+            <div className="text-center mb-6">
+              <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-3xl">🔥</span>
+              </div>
+              <h3 className="text-2xl font-bold text-orange-800 mb-2">Motivatie & Prestatie</h3>
+              <p className="text-gray-600">Leer sporters en vrijwilligers optimaal te motiveren</p>
+            </div>
+            
+            <div className="space-y-4">
+              <div className="bg-orange-50 rounded-lg p-4">
+                <h4 className="font-semibold text-orange-800 mb-2">🧠 Motivatietheorieën</h4>
+                <ul className="text-sm text-orange-700 space-y-1">
+                  <li>• Self-Determination Theory</li>
+                  <li>• Achievement Goal Theory</li>
+                  <li>• Flow theorie</li>
+                  <li>• Intrinsieke vs extrinsieke motivatie</li>
+                </ul>
+              </div>
+              
+              <div className="bg-orange-50 rounded-lg p-4">
+                <h4 className="font-semibold text-orange-800 mb-2">🎯 Praktische Technieken</h4>
+                <ul className="text-sm text-orange-700 space-y-1">
+                  <li>• Doelen stellen (SMART)</li>
+                  <li>• Positieve bekrachtiging</li>
+                  <li>• Mentale training</li>
+                  <li>• Visualisatietechnieken</li>
+                </ul>
+              </div>
+              
+              <div className="bg-orange-50 rounded-lg p-4">
+                <h4 className="font-semibold text-orange-800 mb-2">📈 Prestatie Optimalisatie</h4>
+                <ul className="text-sm text-orange-700 space-y-1">
+                  <li>• Prestatieangst overwinnen</li>
+                  <li>• Concentratie verbeteren</li>
+                  <li>• Zelfvertrouwen opbouwen</li>
+                  <li>• Veerkracht ontwikkelen</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Interactive Learning Tools */}
+        <div className="bg-white rounded-2xl shadow-xl p-8 mb-12">
+          <h3 className="text-2xl font-bold text-gray-800 mb-6 text-center">
+            🤖 AI-Ondersteunde Leertools
+          </h3>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+            <div className="text-center p-4 bg-purple-50 rounded-lg">
+              <span className="text-3xl mb-2 block">💬</span>
+              <h4 className="font-semibold text-purple-800 mb-2">AI Coach</h4>
+              <p className="text-sm text-purple-600">Stel vragen over leiderschapssituaties</p>
+            </div>
+            <div className="text-center p-4 bg-blue-50 rounded-lg">
+              <span className="text-3xl mb-2 block">📊</span>
+              <h4 className="font-semibold text-blue-800 mb-2">Case Analyse</h4>
+              <p className="text-sm text-blue-600">Upload situaties voor analyse</p>
+            </div>
+            <div className="text-center p-4 bg-green-50 rounded-lg">
+              <span className="text-3xl mb-2 block">🎯</span>
+              <h4 className="font-semibold text-green-800 mb-2">Actieplannen</h4>
+              <p className="text-sm text-green-600">Krijg gepersonaliseerde adviezen</p>
+            </div>
+            <div className="text-center p-4 bg-orange-50 rounded-lg">
+              <span className="text-3xl mb-2 block">📚</span>
+              <h4 className="font-semibold text-orange-800 mb-2">Kennisbank</h4>
+              <p className="text-sm text-orange-600">Doorzoek sportpsychologie literatuur</p>
+            </div>
+          </div>
+
+          {/* AI Chatbot Integration */}
+          <TestChatBot />
+        </div>
+
+        {/* Practical Scenarios */}
+        <div className="bg-gradient-to-r from-blue-600 to-green-600 rounded-2xl shadow-xl p-8 text-white mb-12">
+          <h3 className="text-2xl font-bold mb-6 text-center">
+            🎭 Praktijkscenario's voor HBO Sportkunde
+          </h3>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="bg-white bg-opacity-20 rounded-lg p-6">
+              <h4 className="font-bold text-lg mb-3">🏀 Basketbalteam in Crisis</h4>
+              <p className="text-sm mb-4">
+                Een jeugdteam presteert onder verwachting. Er zijn conflicten tussen spelers 
+                en de motivatie is laag. Hoe pak je dit aan als teamleider?
+              </p>
+              <div className="text-xs bg-white bg-opacity-30 rounded p-2">
+                <strong>Leeruitkomsten:</strong> Conflicthantering, teammotivatie, communicatie
+              </div>
+            </div>
+            
+            <div className="bg-white bg-opacity-20 rounded-lg p-6">
+              <h4 className="font-bold text-lg mb-3">🏃‍♀️ Atletiekvereniging Vrijwilligers</h4>
+              <p className="text-sm mb-4">
+                Vrijwilligers bij een atletiekvereniging raken demotiveerd en haken af. 
+                Hoe motiveer je vrijwilligers en behoud je hun betrokkenheid?
+              </p>
+              <div className="text-xs bg-white bg-opacity-30 rounded p-2">
+                <strong>Leeruitkomsten:</strong> Vrijwilligersmotivatie, waardering, betrokkenheid
+              </div>
+            </div>
+            
+            <div className="bg-white bg-opacity-20 rounded-lg p-6">
+              <h4 className="font-bold text-lg mb-3">⚽ Voetbalcoach Dilemma</h4>
+              <p className="text-sm mb-4">
+                Als assistent-coach moet je een moeilijke beslissing nemen over speeltijd 
+                verdeling. Hoe balanceer je individuele en teambelangen?
+              </p>
+              <div className="text-xs bg-white bg-opacity-30 rounded p-2">
+                <strong>Leeruitkomsten:</strong> Besluitvorming, eerlijkheid, teamdynamiek
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Learning Resources */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+          <div className="bg-white rounded-2xl shadow-xl p-8">
+            <h3 className="text-2xl font-bold text-gray-800 mb-6 flex items-center">
+              <span className="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center mr-3">
+                📖
+              </span>
+              Aanbevolen Literatuur
+            </h3>
+            
+            <div className="space-y-4">
+              <div className="border-l-4 border-blue-500 pl-4">
+                <h4 className="font-semibold text-gray-800">Sportpsychologie & Leiderschap</h4>
+                <ul className="text-sm text-gray-600 mt-2 space-y-1">
+                  <li>• "Leadership in Sport" - Chelladurai & Kerwin</li>
+                  <li>• "Sportpsychologie" - Bakker, Oudejans & Binsch</li>
+                  <li>• "The Champion's Mind" - Jim Afremow</li>
+                  <li>• "Mindset" - Carol Dweck</li>
+                </ul>
+              </div>
+              
+              <div className="border-l-4 border-green-500 pl-4">
+                <h4 className="font-semibold text-gray-800">Groepsdynamiek & Teams</h4>
+                <ul className="text-sm text-gray-600 mt-2 space-y-1">
+                  <li>• "Team Dynamics in Sport" - Carron & Eys</li>
+                  <li>• "The Five Dysfunctions of a Team" - Lencioni</li>
+                  <li>• "Groepsdynamica" - Boekaerts & Simons</li>
+                  <li>• "Teamwork and Teamplay" - Salas & Rosen</li>
+                </ul>
+              </div>
+              
+              <div className="border-l-4 border-orange-500 pl-4">
+                <h4 className="font-semibold text-gray-800">Motivatie & Prestatie</h4>
+                <ul className="text-sm text-gray-600 mt-2 space-y-1">
+                  <li>• "Drive" - Daniel Pink</li>
+                  <li>• "Motivation in Sport" - Roberts & Treasure</li>
+                  <li>• "Flow" - Mihaly Csikszentmihalyi</li>
+                  <li>• "Grit" - Angela Duckworth</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <div className="bg-white rounded-2xl shadow-xl p-8">
+            <h3 className="text-2xl font-bold text-gray-800 mb-6 flex items-center">
+              <span className="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center mr-3">
+                🛠️
+              </span>
+              Praktische Tools & Assessments
+            </h3>
+            
+            <div className="space-y-6">
+              <div className="bg-gray-50 rounded-lg p-4">
+                <h4 className="font-semibold text-gray-800 mb-3">🔍 Leiderschapsassessments</h4>
+                <ul className="text-sm text-gray-600 space-y-2">
+                  <li>• <strong>LSS (Leadership Scale for Sports):</strong> Meet je leiderschapsstijl</li>
+                  <li>• <strong>MLQ (Multifactor Leadership Questionnaire):</strong> Transformationeel leiderschap</li>
+                  <li>• <strong>DISC-profiel:</strong> Communicatiestijlen in teams</li>
+                </ul>
+              </div>
+              
+              <div className="bg-gray-50 rounded-lg p-4">
+                <h4 className="font-semibold text-gray-800 mb-3">📊 Team Assessment Tools</h4>
+                <ul className="text-sm text-gray-600 space-y-2">
+                  <li>• <strong>GEQ (Group Environment Questionnaire):</strong> Teamcohesie meten</li>
+                  <li>• <strong>Belbin Team Roles:</strong> Teamrollen identificeren</li>
+                  <li>• <strong>Team Diagnostic Survey:</strong> Teameffectiviteit</li>
+                </ul>
+              </div>
+              
+              <div className="bg-gray-50 rounded-lg p-4">
+                <h4 className="font-semibold text-gray-800 mb-3">💪 Motivatie Instrumenten</h4>
+                <ul className="text-sm text-gray-600 space-y-2">
+                  <li>• <strong>SMS (Sport Motivation Scale):</strong> Motivatietypen</li>
+                  <li>• <strong>TEOSQ:</strong> Prestatiedoeloriëntatie</li>
+                  <li>• <strong>IMI (Intrinsic Motivation Inventory):</strong> Intrinsieke motivatie</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Assignment Ideas */}
+        <div className="bg-white rounded-2xl shadow-xl p-8 mb-12">
+          <h3 className="text-2xl font-bold text-gray-800 mb-6 text-center">
+            📝 Opdrachten & Projecten voor HBO Sportkunde
+          </h3>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h4 className="text-lg font-semibold text-blue-800 mb-4">🎯 Individuele Opdrachten</h4>
+              <div className="space-y-4">
+                <div className="border border-blue-200 rounded-lg p-4">
+                  <h5 className="font-semibold text-blue-700 mb-2">Leiderschapsreflectie</h5>
+                  <p className="text-sm text-gray-600 mb-2">
+                    Analyseer je eigen leiderschapsstijl aan de hand van een assessment en 
+                    reflecteer op sterke punten en ontwikkelpunten.
+                  </p>
+                  <div className="text-xs text-blue-600">
+                    <strong>Deliverable:</strong> Reflectieverslag (1500 woorden) + ontwikkelplan
+                  </div>
+                </div>
+                
+                <div className="border border-blue-200 rounded-lg p-4">
+                  <h5 className="font-semibold text-blue-700 mb-2">Case Study Analyse</h5>
+                  <p className="text-sm text-gray-600 mb-2">
+                    Bestudeer een echte leiderschapscase uit de sport en analyseer de 
+                    toegepaste strategieën en hun effectiviteit.
+                  </p>
+                  <div className="text-xs text-blue-600">
+                    <strong>Deliverable:</strong> Case analyse rapport + presentatie
+                  </div>
+                </div>
+                
+                <div className="border border-blue-200 rounded-lg p-4">
+                  <h5 className="font-semibold text-blue-700 mb-2">Motivatieplan Ontwerp</h5>
+                  <p className="text-sm text-gray-600 mb-2">
+                    Ontwikkel een motivatieplan voor een specifieke doelgroep 
+                    (jeugdsporters, vrijwilligers, of elite atleten).
+                  </p>
+                  <div className="text-xs text-blue-600">
+                    <strong>Deliverable:</strong> Motivatieplan + theoretische onderbouwing
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div>
+              <h4 className="text-lg font-semibold text-green-800 mb-4">👥 Groepsprojecten</h4>
+              <div className="space-y-4">
+                <div className="border border-green-200 rounded-lg p-4">
+                  <h5 className="font-semibold text-green-700 mb-2">Teambuilding Workshop</h5>
+                  <p className="text-sm text-gray-600 mb-2">
+                    Ontwerp en voer een teambuilding workshop uit voor een echte sportorganisatie. 
+                    Evalueer de effectiviteit.
+                  </p>
+                  <div className="text-xs text-green-600">
+                    <strong>Deliverable:</strong> Workshop plan + uitvoering + evaluatierapport
+                  </div>
+                </div>
+                
+                <div className="border border-green-200 rounded-lg p-4">
+                  <h5 className="font-semibold text-green-700 mb-2">Organisatie Diagnose</h5>
+                  <p className="text-sm text-gray-600 mb-2">
+                    Voer een leiderschaps- en cultuuranalyse uit bij een sportvereniging 
+                    en geef advies voor verbetering.
+                  </p>
+                  <div className="text-xs text-green-600">
+                    <strong>Deliverable:</strong> Diagnose rapport + adviesplan + presentatie
+                  </div>
+                </div>
+                
+                <div className="border border-green-200 rounded-lg p-4">
+                  <h5 className="font-semibold text-green-700 mb-2">Interventie Onderzoek</h5>
+                  <p className="text-sm text-gray-600 mb-2">
+                    Implementeer een leiderschaps- of motivatie-interventie en meet 
+                    de effecten met voor- en nametingen.
+                  </p>
+                  <div className="text-xs text-green-600">
+                    <strong>Deliverable:</strong> Onderzoeksrapport + data-analyse + aanbevelingen
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Quick Tips */}
+        <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl shadow-xl p-8 text-white">
+          <h3 className="text-2xl font-bold mb-6 text-center">
+            💡 Snelle Tips voor Sportleiders
+          </h3>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="bg-white bg-opacity-20 rounded-lg p-4">
+              <h4 className="font-bold mb-2">🗣️ Communicatie</h4>
+              <ul className="text-sm space-y-1">
+                <li>• Luister actief naar je team</li>
+                <li>• Geef specifieke, constructieve feedback</li>
+                <li>• Pas je communicatiestijl aan per persoon</li>
+                <li>• Gebruik positieve bekrachtiging</li>
+              </ul>
+            </div>
+            
+            <div className="bg-white bg-opacity-20 rounded-lg p-4">
+              <h4 className="font-bold mb-2">🎯 Doelen Stellen</h4>
+              <ul className="text-sm space-y-1">
+                <li>• Maak doelen SMART (Specifiek, Meetbaar, etc.)</li>
+                <li>• Betrek sporters bij het doelstellingsproces</li>
+                <li>• Stel zowel proces- als uitkomstdoelen</li>
+                <li>• Evalueer en pas doelen regelmatig aan</li>
+              </ul>
+            </div>
+            
+            <div className="bg-white bg-opacity-20 rounded-lg p-4">
+              <h4 className="font-bold mb-2">🤝 Teambuilding</h4>
+              <ul className="text-sm space-y-1">
+                <li>• Organiseer regelmatig teamactiviteiten</li>
+                <li>• Creëer een veilige, inclusieve omgeving</li>
+                <li>• Stimuleer onderlinge samenwerking</li>
+                <li>• Vier successen samen als team</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
+
+      {/* Footer */}
+      <footer className="bg-gray-800 text-white py-8 mt-16">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h4 className="text-xl font-bold mb-4">🏃‍♂️ Sportkunde Leiderschap Academy</h4>
+            <p className="text-gray-300 mb-4">
+              Ontwikkel jezelf tot een inspirerende sportleider met wetenschappelijk onderbouwde methoden
+            </p>
+            <div className="flex justify-center space-x-6 text-sm text-gray-400">
+              <span>💜 Gemaakt voor HBO Sportkunde studenten</span>
+              <span>🤖 Powered by AI</span>
+              <span>📚 Evidence-based learning</span>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
   )
 }
